@@ -18,11 +18,11 @@ position = {
 pyautogui.press("win")
 pyautogui.write("chrome")
 pyautogui.press("enter")
-time.sleep(1)
+time.sleep(2)
 pyautogui.write(url)
 pyautogui.press("enter")
 
-time.sleep(1)
+time.sleep(2)
 pyautogui.click(x=position["x1"], y=position["y1"])
 pyautogui.write(email)
 pyautogui.press("tab")
@@ -32,7 +32,7 @@ pyautogui.press("enter")
 
 time.sleep(2)
 
-tabela = pd.read_csv('produtos.csv')
+tabela = pd.read_csv('data/produtos.csv')
 
 for linha in tabela.index:
     codigo = str(tabela.loc[linha, "codigo"])
