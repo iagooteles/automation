@@ -2,38 +2,36 @@ import time
 import pandas as pd
 import pyautogui
 
-url = 'https://dlp.hashtagtreinamentos.com/python/intensivao/login'
+url = 'http://localhost:3000/'
 email = 'test@gmail.com'
 senha = 'testesenha'
+tabela = pd.read_csv('data/produtos3c.csv', encoding='utf-8')
 
 position = {
-    "x1": 844,
-    "y1": 409,
-    "x2": 841,
-    "y2": 299
+    "x1": 798,
+    "y1": 450,
+    "x2": 820,
+    "y2": 400
 }
-# position = ["x"="844", "y"="409"]
 
-# Abrir o sistema da empresa
 pyautogui.press("win")
+time.sleep(1)
 pyautogui.write("chrome")
 pyautogui.press("enter")
-time.sleep(2)
+time.sleep(1)
 pyautogui.write(url)
 pyautogui.press("enter")
 
-time.sleep(2)
+time.sleep(1)
 pyautogui.click(x=position["x1"], y=position["y1"])
 pyautogui.write(email)
+pyautogui.press("tab")
 pyautogui.press("tab")
 pyautogui.write(senha)
 pyautogui.press("tab")
 pyautogui.press("enter")
 
-time.sleep(2)
-
-tabela = pd.read_csv('data/produtos.csv')
-
+time.sleep(1)
 for linha in tabela.index:
     codigo = str(tabela.loc[linha, "codigo"])
     marca = str(tabela.loc[linha, "marca"])
@@ -42,6 +40,9 @@ for linha in tabela.index:
     preco_unitario = str(tabela.loc[linha, "preco_unitario"])
     custo = str(tabela.loc[linha, "custo"])
     obs = str(tabela.loc[linha, "obs"])
+
+    # print(marca)
+    # print(tipo)
 
     pyautogui.click(x=position["x2"], y=position["y2"])
     pyautogui.write(codigo)
@@ -60,15 +61,3 @@ for linha in tabela.index:
     pyautogui.press("tab")
     pyautogui.press("enter")
     pyautogui.scroll(10000)
-
-
-
-
-
-
-# abrir/importar a base de dados de produtos para cadastrar
-
-# cadastrar um produto
-
-# repetir até acabar a lista de produtos
-
