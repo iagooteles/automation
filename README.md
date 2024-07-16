@@ -1,1 +1,1 @@
-Projeto de Automatização para apresentação para empresa 3 corações.
+Projeto de Automatização para apresentação.
