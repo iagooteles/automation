@@ -28,7 +28,8 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 - Node.js (para rodar o front-end com React)
 - Python 3.x
 - Bibliotecas Python: `pandas`, `pyautogui`
-
+- Google Chrome
+  
 ## Instalação
 
 1. Clone este repositório:
@@ -50,5 +51,6 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 
 5. Execute o programa python main.py em automation
 
+OBS: O script assume que você tem o google chrome na sua máquina.
 
 
